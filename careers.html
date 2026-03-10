@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Careers | ISS @ UW-Madison</title>
+  <link rel="icon" href="ISS logo.jpg" type="image/jpeg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="nav-brand">
+        <img src="ISS logo.jpg" alt="ISS Logo">
+        <span>ISS</span> @ UW-Madison
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="exec-board.html">Exec Board</a></li>
+        <li><a href="careers.html" class="active">Careers</a></li>
+        <li><a href="https://win.wisc.edu/organization/iss" target="_blank" class="btn btn-primary" style="padding: 0.5rem 1.25rem; font-size: 0.9rem;">Join ISS</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <h1>Careers &amp; <span>Opportunities</span></h1>
+      <p>Discover internships, full-time roles, and career resources curated for Information Systems students and anyone interested in business technology.</p>
+    </div>
+  </section>
+
+  <!-- Career Resources -->
+  <section>
+    <div class="container">
+      <div class="section-header">
+        <h2>Career Resources</h2>
+        <p class="section-subtitle">Tools and programs to help you land your dream role</p>
+      </div>
+      <div class="grid-4">
+        <div class="resource-card">
+          <div class="resource-icon">&#128196;</div>
+          <h3>Resume Reviews</h3>
+          <p>Get your resume reviewed by industry professionals and fellow members at our workshop events.</p>
+          <a href="events.html" class="btn btn-outline" style="font-size: 0.85rem; padding: 0.5rem 1rem;">View Workshops</a>
+        </div>
+        <div class="resource-card">
+          <div class="resource-icon">&#127908;</div>
+          <h3>Mock Interviews</h3>
+          <p>Practice behavioral and case interviews with recruiters, alumni, and peers in a low-pressure environment.</p>
+          <a href="events.html" class="btn btn-outline" style="font-size: 0.85rem; padding: 0.5rem 1rem;">Sign Up</a>
+        </div>
+        <div class="resource-card">
+          <div class="resource-icon">&#129309;</div>
+          <h3>Alumni Mentorship</h3>
+          <p>Get paired with an ISS alum working in your field of interest for one-on-one career guidance.</p>
+          <a href="mailto:iss@wisc.edu" class="btn btn-outline" style="font-size: 0.85rem; padding: 0.5rem 1rem;">Learn More</a>
+        </div>
+        <div class="resource-card">
+          <div class="resource-icon">&#128188;</div>
+          <h3>Company Connections</h3>
+          <p>Our corporate partners actively recruit ISS members through exclusive info sessions and events.</p>
+          <a href="#partners" class="btn btn-outline" style="font-size: 0.85rem; padding: 0.5rem 1rem;">Our Partners</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Job Listings -->
+  <section style="background: var(--gray-100);">
+    <div class="container">
+      <div class="section-header">
+        <h2>Featured Opportunities</h2>
+        <p class="section-subtitle">Internships and full-time roles shared by our partners and alumni</p>
+      </div>
+
+      <div class="filter-tabs" style="margin-bottom: 2rem;">
+        <button class="filter-tab active" data-filter="all">All</button>
+        <button class="filter-tab" data-filter="internship">Internships</button>
+        <button class="filter-tab" data-filter="fulltime">Full-Time</button>
+      </div>
+
+      <div style="display: grid; gap: 1rem;" id="jobGrid">
+
+        <div class="job-card" data-type="internship">
+          <div class="job-header">
+            <div>
+              <div class="job-company">Epic Systems</div>
+              <h3>Technical Solutions Engineer Intern</h3>
+            </div>
+            <span class="job-type">Internship &mdash; Summer 2026</span>
+          </div>
+          <p>Work directly with healthcare organizations to implement and optimize Epic's software. Combine technical problem-solving with client communication.</p>
+          <div class="job-tags">
+            <span>Healthcare IT</span>
+            <span>Problem Solving</span>
+            <span>Verona, WI</span>
+          </div>
+        </div>
+
+        <div class="job-card" data-type="fulltime">
+          <div class="job-header">
+            <div>
+              <div class="job-company">Deloitte</div>
+              <h3>Technology Consulting Analyst</h3>
+            </div>
+            <span class="job-type">Full-Time &mdash; 2026</span>
+          </div>
+          <p>Join Deloitte's technology consulting practice helping Fortune 500 companies with digital transformation, ERP implementations, and IT strategy.</p>
+          <div class="job-tags">
+            <span>Consulting</span>
+            <span>ERP</span>
+            <span>Chicago, IL</span>
+          </div>
+        </div>
+
+        <div class="job-card" data-type="internship">
+          <div class="job-header">
+            <div>
+              <div class="job-company">Northwestern Mutual</div>
+              <h3>IT Business Analyst Intern</h3>
+            </div>
+            <span class="job-type">Internship &mdash; Summer 2026</span>
+          </div>
+          <p>Analyze business requirements, document workflows, and collaborate with development teams to deliver technology solutions in financial services.</p>
+          <div class="job-tags">
+            <span>Business Analysis</span>
+            <span>Finance</span>
+            <span>Milwaukee, WI</span>
+          </div>
+        </div>
+
+        <div class="job-card" data-type="fulltime">
+          <div class="job-header">
+            <div>
+              <div class="job-company">Accenture</div>
+              <h3>Technology Strategy Associate</h3>
+            </div>
+            <span class="job-type">Full-Time &mdash; 2026</span>
+          </div>
+          <p>Help clients develop and execute technology strategies that drive business value. Work across industries on cloud, data, and digital transformation projects.</p>
+          <div class="job-tags">
+            <span>Strategy</span>
+            <span>Cloud</span>
+            <span>Multiple Locations</span>
+          </div>
+        </div>
+
+        <div class="job-card" data-type="internship">
+          <div class="job-header">
+            <div>
+              <div class="job-company">American Family Insurance</div>
+              <h3>Data &amp; Analytics Intern</h3>
+            </div>
+            <span class="job-type">Internship &mdash; Summer 2026</span>
+          </div>
+          <p>Support data-driven decision making through dashboards, reports, and analytics projects in the insurance industry.</p>
+          <div class="job-tags">
+            <span>Data Analytics</span>
+            <span>Insurance</span>
+            <span>Madison, WI</span>
+          </div>
+        </div>
+
+        <div class="job-card" data-type="fulltime">
+          <div class="job-header">
+            <div>
+              <div class="job-company">CUNA Mutual Group</div>
+              <h3>IT Project Coordinator</h3>
+            </div>
+            <span class="job-type">Full-Time &mdash; 2026</span>
+          </div>
+          <p>Coordinate IT projects from initiation to delivery. Work with cross-functional teams to manage timelines, resources, and stakeholder communication.</p>
+          <div class="job-tags">
+            <span>Project Management</span>
+            <span>Agile</span>
+            <span>Madison, WI</span>
+          </div>
+        </div>
+
+      </div>
+
+      <div style="text-align: center; margin-top: 2rem;">
+        <p style="color: var(--gray-500); font-size: 0.95rem;">Have a job or internship to share? <a href="mailto:iss@wisc.edu" style="color: var(--uw-red); font-weight: 600;">Email us</a> and we'll post it here.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- IS Career Paths -->
+  <section>
+    <div class="container">
+      <div class="section-header">
+        <h2>IS Career Paths</h2>
+        <p class="section-subtitle">Information Systems opens doors to a wide range of careers</p>
+      </div>
+      <div class="grid-3">
+        <div class="card">
+          <div class="card-icon"><i class="fas fa-laptop-code"></i></div>
+          <h3>Technology Consulting</h3>
+          <p>Help organizations implement and optimize technology solutions. Work with firms like Deloitte, Accenture, EY, and PwC.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon"><i class="fas fa-chart-bar"></i></div>
+          <h3>Business / Data Analytics</h3>
+          <p>Turn data into actionable insights. Roles span from business analyst to data scientist across every industry.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon"><i class="fas fa-tasks"></i></div>
+          <h3>IT Project Management</h3>
+          <p>Lead technology projects from planning to delivery. Coordinate teams, manage budgets, and drive outcomes.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon"><i class="fas fa-shield-alt"></i></div>
+          <h3>Cybersecurity</h3>
+          <p>Protect organizations from cyber threats. Roles include security analyst, risk management, and compliance.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon"><i class="fas fa-cubes"></i></div>
+          <h3>Product Management</h3>
+          <p>Drive product strategy and roadmap at tech companies. Bridge the gap between engineering, design, and business.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon"><i class="fas fa-database"></i></div>
+          <h3>Enterprise Systems (ERP)</h3>
+          <p>Implement and manage systems like SAP, Oracle, and Salesforce that power global businesses.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Company Partners -->
+  <section id="partners" style="background: var(--gray-100);">
+    <div class="container">
+      <div class="section-header">
+        <h2>Our Partners</h2>
+        <p class="section-subtitle">Companies that recruit and collaborate with ISS members</p>
+      </div>
+      <div class="partners-grid">
+        <div class="partner-card">
+          <div class="partner-icon">&#127973;</div>
+          <h4>Epic Systems</h4>
+          <p>Healthcare IT</p>
+        </div>
+        <div class="partner-card">
+          <div class="partner-icon">&#128200;</div>
+          <h4>Deloitte</h4>
+          <p>Consulting</p>
+        </div>
+        <div class="partner-card">
+          <div class="partner-icon">&#127974;</div>
+          <h4>Northwestern Mutual</h4>
+          <p>Financial Services</p>
+        </div>
+        <div class="partner-card">
+          <div class="partner-icon">&#128736;</div>
+          <h4>Accenture</h4>
+          <p>Technology &amp; Consulting</p>
+        </div>
+        <div class="partner-card">
+          <div class="partner-icon">&#127968;</div>
+          <h4>American Family</h4>
+          <p>Insurance</p>
+        </div>
+        <div class="partner-card">
+          <div class="partner-icon">&#128202;</div>
+          <h4>EY</h4>
+          <p>Advisory &amp; Consulting</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container">
+      <h2>Kickstart Your Career with ISS</h2>
+      <p>Join our community to access exclusive job postings, mentorship, and networking events that connect you directly with employers.</p>
+      <div class="btn-group" style="justify-content: center;">
+        <a href="https://win.wisc.edu/organization/iss" target="_blank" class="btn btn-primary">
+          <i class="fas fa-arrow-right"></i> Join ISS
+        </a>
+        <a href="events.html" class="btn btn-outline" style="border-color: white; color: white;">
+          <i class="fas fa-calendar"></i> Upcoming Events
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="ISS logo.jpg" alt="ISS Logo">
+          <p>Information Systems Society at the University of Wisconsin-Madison. Connecting students to the world of business technology.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" aria-label="Email"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+        <div>
+          <h4>Pages</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="exec-board.html">Exec Board</a></li>
+            <li><a href="careers.html">Careers</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="https://win.wisc.edu/organization/iss" target="_blank">Join on WIN</a></li>
+            <li><a href="https://business.wisc.edu" target="_blank">Wisconsin School of Business</a></li>
+            <li><a href="careers.html">Job Board</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="mailto:iss@wisc.edu"><i class="fas fa-envelope" style="width:16px;"></i> iss@wisc.edu</a></li>
+            <li><i class="fas fa-map-marker-alt" style="width:16px;"></i> Grainger Hall, Madison WI</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Information Systems Society &mdash; UW-Madison. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Navbar scroll effect
+    window.addEventListener('scroll', () => {
+      document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 20);
+    });
+
+    // Mobile menu toggle
+    document.getElementById('hamburger').addEventListener('click', () => {
+      document.getElementById('navLinks').classList.toggle('open');
+    });
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.getElementById('navLinks').classList.remove('open');
+      });
+    });
+
+    // Job filter tabs
+    const filterTabs = document.querySelectorAll('.filter-tab');
+    const jobCards = document.querySelectorAll('.job-card');
+
+    filterTabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        filterTabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+
+        const filter = tab.dataset.filter;
+
+        jobCards.forEach(card => {
+          if (filter === 'all' || card.dataset.type === filter) {
+            card.style.display = '';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>
