@@ -905,3 +905,279 @@ section {
   .stats-grid { grid-template-columns: 1fr; }
   .btn-group { flex-direction: column; align-items: center; }
 }
+
+/* ===== Scroll Progress Bar ===== */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background: linear-gradient(90deg, var(--uw-red), #ff4d4d);
+  z-index: 9999;
+  transition: width 0.05s linear;
+  box-shadow: 0 0 8px rgba(197, 5, 12, 0.5);
+}
+
+/* ===== Scroll Reveal Animations ===== */
+.reveal-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal-up.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal-left.revealed {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal-right {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal-right.revealed {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal-fade {
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+.reveal-fade.revealed {
+  opacity: 1;
+}
+
+.reveal-scale {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal-scale.revealed {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Stagger children in grids */
+.reveal-child {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal-child.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== Hero Word Reveal ===== */
+.word-reveal {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: wordReveal 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes wordReveal {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== Hero entrance for paragraph and buttons ===== */
+.hero-text p {
+  opacity: 0;
+  animation: fadeSlideUp 0.8s 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.hero-text .btn-group {
+  opacity: 0;
+  animation: fadeSlideUp 0.8s 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.hero-visual {
+  opacity: 0;
+  animation: fadeSlideUp 1s 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== Logo floating animation ===== */
+.hero-logo-wrapper img {
+  animation: floatLogo 4s ease-in-out infinite;
+}
+
+@keyframes floatLogo {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+/* ===== Glowing card hover effect ===== */
+.card::before,
+.event-card::before,
+.member-card::before,
+.resource-card::before,
+.job-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: var(--radius);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(197, 5, 12, 0.08) 0%, transparent 60%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.card,
+.event-card,
+.member-card,
+.resource-card,
+.job-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.card:hover::before,
+.event-card:hover::before,
+.member-card:hover::before,
+.resource-card:hover::before,
+.job-card:hover::before {
+  opacity: 1;
+}
+
+/* ===== Stats bar counter glow ===== */
+.stat-item {
+  position: relative;
+}
+
+.stat-item h3 {
+  transition: text-shadow 0.3s ease;
+}
+
+.stats-bar:hover .stat-item h3 {
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+/* ===== Smooth section border glow ===== */
+.section-header h2::after {
+  transition: width 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  width: 40px;
+}
+
+.section-header.revealed h2::after,
+.section-header h2:hover::after {
+  width: 80px;
+}
+
+/* ===== Nav link underline animation ===== */
+.nav-links a {
+  position: relative;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: 2px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: var(--uw-red);
+  border-radius: 1px;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: translateX(-50%);
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+  width: 60%;
+}
+
+/* ===== Page hero on interior pages ===== */
+.page-hero h1 {
+  opacity: 0;
+  animation: fadeSlideUp 0.7s 0.1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.page-hero p {
+  opacity: 0;
+  animation: fadeSlideUp 0.7s 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* ===== Filter tab click ripple ===== */
+.filter-tab {
+  position: relative;
+  overflow: hidden;
+}
+
+.filter-tab::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(197, 5, 12, 0.1);
+  transform: translate(-50%, -50%);
+  transition: width 0.4s ease, height 0.4s ease;
+}
+
+.filter-tab:active::after {
+  width: 200px;
+  height: 200px;
+}
+
+/* ===== CTA section shimmer ===== */
+.cta-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-section::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(ellipse at 30% 50%, rgba(197, 5, 12, 0.15) 0%, transparent 50%);
+  animation: shimmerBg 8s ease-in-out infinite alternate;
+}
+
+@keyframes shimmerBg {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(5%, 3%); }
+}
+
+/* ===== Smooth card glow follow cursor ===== */
+.card > *,
+.event-card > *,
+.member-card > *,
+.resource-card > *,
+.job-card > * {
+  position: relative;
+  z-index: 1;
+}

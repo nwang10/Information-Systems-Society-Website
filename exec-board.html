@@ -44,7 +44,7 @@
   <!-- Executive Board -->
   <section>
     <div class="container">
-      <div class="section-header">
+      <div class="section-header reveal-up">
         <h2>2025&ndash;2026 Executive Board</h2>
         <p class="section-subtitle">The team behind the scenes making it all happen</p>
       </div>
@@ -176,7 +176,7 @@
 
   <!-- Join the Board CTA -->
   <section class="cta-section">
-    <div class="container">
+    <div class="container reveal-scale">
       <h2>Interested in Leadership?</h2>
       <p>Exec board applications open every spring. Gain leadership experience, build your resume, and make a real impact on the ISS community.</p>
       <div class="btn-group" style="justify-content: center;">
@@ -246,7 +246,17 @@
         document.getElementById('navLinks').classList.remove('open');
       });
     });
+
+    // Glow follow cursor on cards
+    document.querySelectorAll('.card, .event-card, .member-card, .resource-card, .job-card').forEach(card => {
+      card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        card.style.setProperty('--mouse-x', ((e.clientX - rect.left) / rect.width * 100) + '%');
+        card.style.setProperty('--mouse-y', ((e.clientY - rect.top) / rect.height * 100) + '%');
+      });
+    });
   </script>
+  <script src="animations.js"></script>
 
 </body>
 </html>

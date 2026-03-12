@@ -57,7 +57,7 @@
   <!-- Upcoming Events -->
   <section>
     <div class="container">
-      <div class="section-header">
+      <div class="section-header reveal-up">
         <h2>Upcoming Events</h2>
         <p class="section-subtitle">Mark your calendar and don't miss out</p>
       </div>
@@ -196,7 +196,7 @@
   <!-- Past Events Section -->
   <section style="background: var(--gray-100);">
     <div class="container">
-      <div class="section-header">
+      <div class="section-header reveal-up">
         <h2>Past Event Highlights</h2>
         <p class="section-subtitle">A look back at what we've done this year</p>
       </div>
@@ -222,7 +222,7 @@
 
   <!-- CTA -->
   <section class="cta-section">
-    <div class="container">
+    <div class="container reveal-scale">
       <h2>Never Miss an Event</h2>
       <p>Join ISS on WIN to get notifications about upcoming events and stay connected with our community.</p>
       <div class="btn-group" style="justify-content: center;">
@@ -316,7 +316,17 @@
         });
       });
     });
+
+    // Glow follow cursor on cards
+    document.querySelectorAll('.card, .event-card, .member-card, .resource-card, .job-card').forEach(card => {
+      card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        card.style.setProperty('--mouse-x', ((e.clientX - rect.left) / rect.width * 100) + '%');
+        card.style.setProperty('--mouse-y', ((e.clientY - rect.top) / rect.height * 100) + '%');
+      });
+    });
   </script>
+  <script src="animations.js"></script>
 
 </body>
 </html>

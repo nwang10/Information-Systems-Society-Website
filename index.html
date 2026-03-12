@@ -83,7 +83,7 @@
   <!-- Mission Section -->
   <section>
     <div class="container mission-grid">
-      <div class="mission-text">
+      <div class="mission-text reveal-left">
         <h2>Our Mission</h2>
         <p>The Information Systems Society promotes the field of Information Systems by building bridges between students and the professional world. We believe that understanding how technology drives business is essential in today's economy.</p>
         <p>Through alumni panels, company visits, social events, and professional development workshops, we provide members with the network and knowledge they need to succeed&mdash;no matter their major.</p>
@@ -93,7 +93,7 @@
           </a>
         </div>
       </div>
-      <div class="mission-image">
+      <div class="mission-image reveal-right">
         &#128187;
       </div>
     </div>
@@ -102,7 +102,7 @@
   <!-- What We Offer -->
   <section style="background: var(--gray-100);">
     <div class="container">
-      <div class="section-header">
+      <div class="section-header reveal-up">
         <h2>What We Offer</h2>
         <p class="section-subtitle">Opportunities to grow your career, expand your network, and have fun</p>
       </div>
@@ -134,7 +134,7 @@
   <!-- Upcoming Events Preview -->
   <section>
     <div class="container">
-      <div class="section-header">
+      <div class="section-header reveal-up">
         <h2>Upcoming Events</h2>
         <p class="section-subtitle">Don't miss out on what's happening next</p>
       </div>
@@ -189,7 +189,7 @@
 
   <!-- CTA Section -->
   <section class="cta-section">
-    <div class="container">
+    <div class="container reveal-scale">
       <h2>Ready to Join ISS?</h2>
       <p>Whether you're an IS major or just curious about the field, you're welcome here. Join our community and unlock opportunities that will shape your career.</p>
       <div class="btn-group" style="justify-content: center;">
@@ -264,7 +264,17 @@
         document.getElementById('navLinks').classList.remove('open');
       });
     });
+
+    // Glow follow cursor on cards
+    document.querySelectorAll('.card, .event-card, .member-card, .resource-card, .job-card').forEach(card => {
+      card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        card.style.setProperty('--mouse-x', ((e.clientX - rect.left) / rect.width * 100) + '%');
+        card.style.setProperty('--mouse-y', ((e.clientY - rect.top) / rect.height * 100) + '%');
+      });
+    });
   </script>
+  <script src="animations.js"></script>
 
 </body>
 </html>

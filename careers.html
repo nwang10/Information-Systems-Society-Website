@@ -44,7 +44,7 @@
   <!-- Career Resources -->
   <section>
     <div class="container">
-      <div class="section-header">
+      <div class="section-header reveal-up">
         <h2>Career Resources</h2>
         <p class="section-subtitle">Tools and programs to help you land your dream role</p>
       </div>
@@ -80,7 +80,7 @@
   <!-- Job Listings -->
   <section style="background: var(--gray-100);">
     <div class="container">
-      <div class="section-header">
+      <div class="section-header reveal-up">
         <h2>Featured Opportunities</h2>
         <p class="section-subtitle">Internships and full-time roles shared by our partners and alumni</p>
       </div>
@@ -200,7 +200,7 @@
   <!-- IS Career Paths -->
   <section>
     <div class="container">
-      <div class="section-header">
+      <div class="section-header reveal-up">
         <h2>IS Career Paths</h2>
         <p class="section-subtitle">Information Systems opens doors to a wide range of careers</p>
       </div>
@@ -242,7 +242,7 @@
   <!-- Company Partners -->
   <section id="partners" style="background: var(--gray-100);">
     <div class="container">
-      <div class="section-header">
+      <div class="section-header reveal-up">
         <h2>Our Partners</h2>
         <p class="section-subtitle">Companies that recruit and collaborate with ISS members</p>
       </div>
@@ -283,7 +283,7 @@
 
   <!-- CTA -->
   <section class="cta-section">
-    <div class="container">
+    <div class="container reveal-scale">
       <h2>Kickstart Your Career with ISS</h2>
       <p>Join our community to access exclusive job postings, mentorship, and networking events that connect you directly with employers.</p>
       <div class="btn-group" style="justify-content: center;">
@@ -377,7 +377,17 @@
         });
       });
     });
+
+    // Glow follow cursor on cards
+    document.querySelectorAll('.card, .event-card, .member-card, .resource-card, .job-card').forEach(card => {
+      card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        card.style.setProperty('--mouse-x', ((e.clientX - rect.left) / rect.width * 100) + '%');
+        card.style.setProperty('--mouse-y', ((e.clientY - rect.top) / rect.height * 100) + '%');
+      });
+    });
   </script>
+  <script src="animations.js"></script>
 
 </body>
 </html>
