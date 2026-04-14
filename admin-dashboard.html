@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard | ISS @ UW-Madison</title>
+  <link rel="icon" href="ISS logo.jpg" type="image/jpeg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <nav class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="nav-brand">
+        <img src="ISS logo.jpg" alt="ISS Logo">
+        <span>ISS</span> @ UW-Madison
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="exec-board.html">Exec Board</a></li>
+        <li><a href="careers.html">Careers</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="https://win.wisc.edu/organization/iss" target="_blank" class="btn btn-primary" style="padding: 0.5rem 1.25rem; font-size: 0.9rem;">Join ISS</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <section class="page-hero admin-hero">
+    <div class="container">
+      <h1>Admin <span>Dashboard</span></h1>
+      <p>Manage events, achievements, and job postings. Data is stored in <code>localStorage</code> for this milestone; Firestore will back these lists next.</p>
+      <div class="admin-toolbar">
+        <span id="adminWelcome" class="admin-welcome"></span>
+        <button type="button" class="btn btn-outline" id="logoutBtn"><i class="fas fa-right-from-bracket"></i> Log out</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="admin-section">
+    <div class="container">
+      <div class="dash-grid">
+
+        <div class="dash-card reveal-up">
+          <h2><i class="fas fa-calendar-days"></i> Events</h2>
+          <p class="dash-desc">Add a one-line event entry (title &mdash; date).</p>
+          <div class="dash-input-row">
+            <input type="text" id="eventInput" placeholder="e.g. Alumni panel &mdash; Feb 12">
+            <button type="button" class="btn btn-primary btn-sm" id="eventAdd">Add</button>
+          </div>
+          <ul class="dash-list" id="eventList"></ul>
+        </div>
+
+        <div class="dash-card reveal-up">
+          <h2><i class="fas fa-trophy"></i> Achievements</h2>
+          <p class="dash-desc">Track chapter wins, competition placements, or member spotlights.</p>
+          <div class="dash-input-row">
+            <input type="text" id="achievementInput" placeholder="e.g. 1st place &mdash; case competition">
+            <button type="button" class="btn btn-primary btn-sm" id="achievementAdd">Add</button>
+          </div>
+          <ul class="dash-list" id="achievementList"></ul>
+        </div>
+
+        <div class="dash-card reveal-up">
+          <h2><i class="fas fa-briefcase"></i> Job postings</h2>
+          <p class="dash-desc">Draft postings for the careers page (live board remains hardcoded until CMS/Firestore).</p>
+          <div class="dash-input-row">
+            <input type="text" id="jobInput" placeholder="e.g. Company &mdash; Role title">
+            <button type="button" class="btn btn-primary btn-sm" id="jobAdd">Add</button>
+          </div>
+          <ul class="dash-list" id="jobList"></ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="ISS logo.jpg" alt="ISS Logo">
+          <p>Information Systems Society at the University of Wisconsin-Madison. Connecting students to the world of business technology.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" aria-label="Email"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+        <div>
+          <h4>Pages</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="exec-board.html">Exec Board</a></li>
+            <li><a href="careers.html">Careers</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="login.html">Login</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="https://win.wisc.edu/organization/iss" target="_blank">Join on WIN</a></li>
+            <li><a href="https://business.wisc.edu" target="_blank">Wisconsin School of Business</a></li>
+            <li><a href="careers.html">Job Board</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="mailto:iss@wisc.edu"><i class="fas fa-envelope" style="width:16px;"></i> iss@wisc.edu</a></li>
+            <li><i class="fas fa-map-marker-alt" style="width:16px;"></i> Grainger Hall, Madison WI</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Information Systems Society &mdash; UW-Madison. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="auth.js"></script>
+  <script>
+    (function () {
+    var session = issAuth.get();
+    if (!session || session.role !== 'admin') {
+      location.href = 'login.html?next=' + encodeURIComponent('admin-dashboard.html');
+      return;
+    }
+    document.getElementById('adminWelcome').textContent = 'Signed in as ' + (session && session.email ? session.email : 'admin');
+
+    function listKey(name) {
+      return 'issAdmin_' + name;
+    }
+
+    function loadList(key) {
+      try {
+        return JSON.parse(localStorage.getItem(listKey(key)) || '[]');
+      } catch (e) {
+        return [];
+      }
+    }
+
+    function saveList(key, arr) {
+      localStorage.setItem(listKey(key), JSON.stringify(arr));
+    }
+
+    function render(key, ulId) {
+      var ul = document.getElementById(ulId);
+      var items = loadList(key);
+      ul.innerHTML = '';
+      items.forEach(function (text, i) {
+        var li = document.createElement('li');
+        var span = document.createElement('span');
+        span.className = 'dash-li-text';
+        span.textContent = text;
+        var btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'dash-remove';
+        btn.setAttribute('aria-label', 'Remove');
+        btn.textContent = '\u00d7';
+        btn.addEventListener('click', function () {
+          var cur = loadList(key);
+          cur.splice(i, 1);
+          saveList(key, cur);
+          render(key, ulId);
+        });
+        li.appendChild(span);
+        li.appendChild(btn);
+        ul.appendChild(li);
+      });
+    }
+
+    function wireAdd(inputId, buttonId, key, listId) {
+      document.getElementById(buttonId).addEventListener('click', function () {
+        var v = document.getElementById(inputId).value.trim();
+        if (!v) return;
+        var items = loadList(key);
+        items.push(v);
+        saveList(key, items);
+        document.getElementById(inputId).value = '';
+        render(key, listId);
+      });
+    }
+
+    render('events', 'eventList');
+    render('achievements', 'achievementList');
+    render('jobs', 'jobList');
+    wireAdd('eventInput', 'eventAdd', 'events', 'eventList');
+    wireAdd('achievementInput', 'achievementAdd', 'achievements', 'achievementList');
+    wireAdd('jobInput', 'jobAdd', 'jobs', 'jobList');
+
+    document.getElementById('logoutBtn').addEventListener('click', function () {
+      issAuth.clear();
+      location.href = 'login.html';
+    });
+
+    window.addEventListener('scroll', function () {
+      document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 20);
+    });
+    document.getElementById('hamburger').addEventListener('click', function () {
+      document.getElementById('navLinks').classList.toggle('open');
+    });
+    document.querySelectorAll('.nav-links a').forEach(function (link) {
+      link.addEventListener('click', function () {
+        document.getElementById('navLinks').classList.remove('open');
+      });
+    });
+    })();
+  </script>
+  <script src="animations.js"></script>
+</body>
+</html>

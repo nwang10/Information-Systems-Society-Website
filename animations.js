@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // Auto-add reveal-child to grid items
-  document.querySelectorAll('.grid-3, .grid-4, .grid-2, .partners-grid').forEach(grid => {
+  document.querySelectorAll('.grid-3, .grid-4, .grid-2, .partners-grid, #jobGrid').forEach(grid => {
     grid.querySelectorAll('.card, .event-card, .member-card, .resource-card, .partner-card, .job-card').forEach(child => {
       child.classList.add('reveal-child');
     });
@@ -100,7 +100,7 @@ function animateCounter(el) {
 
 // ===== Card Tilt Effect =====
 function initTilt() {
-  document.querySelectorAll('.card, .event-card, .member-card, .resource-card, .partner-card').forEach(card => {
+  document.querySelectorAll('.card, .event-card, .member-card, .resource-card, .partner-card, .job-card').forEach(card => {
     card.addEventListener('mousemove', (e) => {
       const rect = card.getBoundingClientRect();
       const x = e.clientX - rect.left;

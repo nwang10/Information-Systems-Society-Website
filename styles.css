@@ -1181,3 +1181,268 @@ section {
   position: relative;
   z-index: 1;
 }
+
+/* ===== Forms (contact & login) ===== */
+.form-section {
+  padding: 2rem 0 5rem;
+}
+
+.form-card {
+  max-width: 640px;
+  margin: 0 auto;
+  background: var(--uw-white);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius);
+  padding: 2rem 2.25rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.form-card-narrow {
+  max-width: 440px;
+}
+
+.form-row {
+  margin-bottom: 1.25rem;
+}
+
+.form-row label {
+  display: block;
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-bottom: 0.35rem;
+}
+
+.form-row input,
+.form-row select,
+.form-row textarea {
+  width: 100%;
+  padding: 0.65rem 0.85rem;
+  border-radius: 8px;
+  border: 1px solid var(--gray-200);
+  font-family: inherit;
+  font-size: 1rem;
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+
+.form-row input:focus,
+.form-row select:focus,
+.form-row textarea:focus {
+  outline: none;
+  border-color: var(--uw-red);
+  box-shadow: 0 0 0 3px rgba(197, 5, 12, 0.12);
+}
+
+.form-hint {
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  color: var(--gray-500);
+  line-height: 1.5;
+}
+
+.form-status {
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  min-height: 1.25em;
+}
+
+.form-status-ok {
+  color: #166534;
+}
+
+.form-status-error {
+  color: var(--uw-dark-red);
+}
+
+.role-fieldset {
+  border: none;
+  padding: 0;
+  margin: 0 0 1.25rem;
+}
+
+.role-legend {
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.role-toggle {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.role-option {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--gray-200);
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: border-color var(--transition), background var(--transition);
+}
+
+.role-option:hover {
+  border-color: var(--gray-300);
+}
+
+.role-option:has(input:checked) {
+  border-color: var(--uw-red);
+  background: rgba(197, 5, 12, 0.06);
+}
+
+.role-option input {
+  accent-color: var(--uw-red);
+}
+
+/* ===== Job board meta / apply ===== */
+.job-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem 1.25rem;
+  margin-bottom: 0.75rem;
+  font-size: 0.88rem;
+  color: var(--gray-500);
+}
+
+.job-meta span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.job-pay {
+  font-weight: 700;
+  color: var(--dark);
+}
+
+.job-apply {
+  margin-top: 0.25rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.btn-sm {
+  padding: 0.45rem 1rem;
+  font-size: 0.85rem;
+}
+
+/* ===== Admin dashboard ===== */
+.admin-hero .admin-toolbar {
+  margin-top: 1.25rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.admin-welcome {
+  font-size: 0.95rem;
+  color: var(--gray-700);
+}
+
+.admin-section {
+  padding: 3rem 0 5rem;
+}
+
+.dash-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.dash-card {
+  background: var(--uw-white);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius);
+  padding: 1.5rem 1.5rem 1.25rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.dash-card h2 {
+  font-size: 1.15rem;
+  margin-bottom: 0.35rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.dash-card h2 i {
+  color: var(--uw-red);
+}
+
+.dash-desc {
+  font-size: 0.85rem;
+  color: var(--gray-500);
+  margin-bottom: 1rem;
+}
+
+.dash-input-row {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.dash-input-row input {
+  flex: 1;
+  min-width: 0;
+  padding: 0.55rem 0.75rem;
+  border-radius: 8px;
+  border: 1px solid var(--gray-200);
+  font-family: inherit;
+}
+
+.dash-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-height: 220px;
+  overflow-y: auto;
+}
+
+.dash-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--gray-200);
+  font-size: 0.9rem;
+}
+
+.dash-li-text {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.dash-remove {
+  flex-shrink: 0;
+  border: none;
+  background: var(--gray-100);
+  color: var(--gray-700);
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  line-height: 1;
+  transition: background var(--transition), color var(--transition);
+}
+
+.dash-remove:hover {
+  background: var(--uw-red);
+  color: white;
+}
+
+.page-hero code {
+  background: rgba(197, 5, 12, 0.08);
+  padding: 0.1rem 0.35rem;
+  border-radius: 4px;
+  font-size: 0.85em;
+}

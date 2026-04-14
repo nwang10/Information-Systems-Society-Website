@@ -25,6 +25,8 @@
         <li><a href="events.html">Events</a></li>
         <li><a href="exec-board.html">Exec Board</a></li>
         <li><a href="careers.html" class="active">Careers</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="login.html">Login</a></li>
         <li><a href="https://win.wisc.edu/organization/iss" target="_blank" class="btn btn-primary" style="padding: 0.5rem 1.25rem; font-size: 0.9rem;">Join ISS</a></li>
       </ul>
       <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
@@ -87,106 +89,211 @@
 
       <div class="filter-tabs" style="margin-bottom: 2rem;">
         <button class="filter-tab active" data-filter="all">All</button>
-        <button class="filter-tab" data-filter="internship">Internships</button>
-        <button class="filter-tab" data-filter="fulltime">Full-Time</button>
+        <button class="filter-tab" data-filter="remote">Remote</button>
+        <button class="filter-tab" data-filter="hybrid">Hybrid</button>
+        <button class="filter-tab" data-filter="onsite">On-site</button>
       </div>
 
       <div style="display: grid; gap: 1rem;" id="jobGrid">
 
-        <div class="job-card" data-type="internship">
+        <div class="job-card" data-work="onsite">
           <div class="job-header">
             <div>
-              <div class="job-company">Epic Systems</div>
-              <h3>Technical Solutions Engineer Intern</h3>
+              <div class="job-company">BWXT</div>
+              <h3>Software Quality Assurance Auditor</h3>
             </div>
-            <span class="job-type">Internship &mdash; Summer 2026</span>
+            <span class="job-type">Posted ~55 min ago</span>
           </div>
-          <p>Work directly with healthcare organizations to implement and optimize Epic's software. Combine technical problem-solving with client communication.</p>
+          <div class="job-meta">
+            <span><i class="fas fa-location-dot"></i> Lynchburg, VA</span>
+            <span><i class="fas fa-building"></i> On-site</span>
+            <span><i class="fas fa-users"></i> 5001&ndash;10,000</span>
+            <span class="job-pay">$54,000&ndash;$88,000/yr</span>
+          </div>
+          <p>1. Strong background in software quality assurance, testing, and validation. 2. Experience with functional specification reviews, ensuring design and functional requirements align. 3. Excellent attention to detail and passion for quality at every stage of software development.</p>
           <div class="job-tags">
-            <span>Healthcare IT</span>
-            <span>Problem Solving</span>
-            <span>Verona, WI</span>
+            <span>Manufacturing</span>
+            <span>QA</span>
           </div>
+          <a class="btn btn-primary btn-sm job-apply" href="#" aria-label="Apply to Software Quality Assurance Auditor at BWXT (add external URL)"><i class="fas fa-arrow-up-right-from-square"></i> Apply</a>
         </div>
 
-        <div class="job-card" data-type="fulltime">
+        <div class="job-card" data-work="onsite">
           <div class="job-header">
             <div>
-              <div class="job-company">Deloitte</div>
-              <h3>Technology Consulting Analyst</h3>
+              <div class="job-company">SpaceX</div>
+              <h3>RF Silicon Software Engineer (Starlink)</h3>
             </div>
-            <span class="job-type">Full-Time &mdash; 2026</span>
+            <span class="job-type">Posted ~56 min ago</span>
           </div>
-          <p>Join Deloitte's technology consulting practice helping Fortune 500 companies with digital transformation, ERP implementations, and IT strategy.</p>
+          <div class="job-meta">
+            <span><i class="fas fa-location-dot"></i> Redmond, WA</span>
+            <span><i class="fas fa-building"></i> On-site</span>
+            <span><i class="fas fa-users"></i> 10,000+</span>
+            <span class="job-pay">$122,500&ndash;$145,000/yr</span>
+          </div>
+          <p>1. Bachelor&rsquo;s in computer science, computer engineering, electrical engineering, or physics. 2. 1+ years of software development in a high-level language such as C#, Python, or C++. 3. Willing to work extended hours and weekends when needed for critical milestones.</p>
           <div class="job-tags">
-            <span>Consulting</span>
-            <span>ERP</span>
-            <span>Chicago, IL</span>
+            <span>Aerospace</span>
+            <span>Semiconductor</span>
+            <span>Software</span>
           </div>
+          <a class="btn btn-primary btn-sm job-apply" href="#" aria-label="Apply to RF Silicon Software Engineer at SpaceX"><i class="fas fa-arrow-up-right-from-square"></i> Apply</a>
         </div>
 
-        <div class="job-card" data-type="internship">
+        <div class="job-card" data-work="remote">
           <div class="job-header">
             <div>
-              <div class="job-company">Northwestern Mutual</div>
-              <h3>IT Business Analyst Intern</h3>
+              <div class="job-company">ICF</div>
+              <h3>Associate Software Engineer</h3>
             </div>
-            <span class="job-type">Internship &mdash; Summer 2026</span>
+            <span class="job-type">Posted ~57 min ago</span>
           </div>
-          <p>Analyze business requirements, document workflows, and collaborate with development teams to deliver technology solutions in financial services.</p>
+          <div class="job-meta">
+            <span><i class="fas fa-location-dot"></i> Reston, VA (remote)</span>
+            <span><i class="fas fa-building"></i> Remote</span>
+            <span><i class="fas fa-users"></i> 5001&ndash;10,000</span>
+            <span class="job-pay">$61,232&ndash;$104,094/yr</span>
+          </div>
+          <p>1. Completed Bachelor&rsquo;s in Computer Science or closely related field by start date. 2. U.S. citizenship required; eligible to obtain and maintain Public Trust / security clearance as required for the role.</p>
           <div class="job-tags">
-            <span>Business Analysis</span>
+            <span>Government</span>
+            <span>Information Technology</span>
+          </div>
+          <a class="btn btn-primary btn-sm job-apply" href="#" aria-label="Apply to Associate Software Engineer at ICF"><i class="fas fa-arrow-up-right-from-square"></i> Apply</a>
+        </div>
+
+        <div class="job-card" data-work="hybrid">
+          <div class="job-header">
+            <div>
+              <div class="job-company">Axon</div>
+              <h3>Site Reliability Engineer I</h3>
+            </div>
+            <span class="job-type">Posted ~1 hr ago</span>
+          </div>
+          <div class="job-meta">
+            <span><i class="fas fa-location-dot"></i> Washington, United States</span>
+            <span><i class="fas fa-building"></i> Hybrid</span>
+            <span><i class="fas fa-users"></i> 1001&ndash;5000</span>
+            <span class="job-pay">$110,250&ndash;$135,000/yr</span>
+          </div>
+          <p>1. Proficient in one or more of Python, Golang, Scala/Java (coding test required). 2. Meaningful educational or professional experience in several listed reliability areas. 3. Interest in globally diverse 24/7 high-volume systems.</p>
+          <div class="job-tags">
+            <span>Cyber Security</span>
+            <span>Cloud Computing</span>
+            <span>Software</span>
+          </div>
+          <a class="btn btn-primary btn-sm job-apply" href="#" aria-label="Apply to Site Reliability Engineer I at Axon"><i class="fas fa-arrow-up-right-from-square"></i> Apply</a>
+        </div>
+
+        <div class="job-card" data-work="hybrid">
+          <div class="job-header">
+            <div>
+              <div class="job-company">Betterment</div>
+              <h3>Analytics Engineer</h3>
+            </div>
+            <span class="job-type">Posted ~1 hr ago</span>
+          </div>
+          <div class="job-meta">
+            <span><i class="fas fa-location-dot"></i> Betterment HQ &mdash; New York City</span>
+            <span><i class="fas fa-building"></i> Hybrid</span>
+            <span><i class="fas fa-users"></i> 501&ndash;1000</span>
+            <span class="job-pay">$100,000&ndash;$120,000/yr</span>
+          </div>
+          <p>1. One to three years writing SQL and transforming data. 2. Familiarity with ETL, Python, and pipelines for large datasets. 3. Passion for scaling and automating analytics work.</p>
+          <div class="job-tags">
             <span>Finance</span>
-            <span>Milwaukee, WI</span>
+            <span>Analytics</span>
           </div>
+          <a class="btn btn-primary btn-sm job-apply" href="#" aria-label="Apply to Analytics Engineer at Betterment"><i class="fas fa-arrow-up-right-from-square"></i> Apply</a>
         </div>
 
-        <div class="job-card" data-type="fulltime">
+        <div class="job-card" data-work="hybrid">
           <div class="job-header">
             <div>
-              <div class="job-company">Accenture</div>
-              <h3>Technology Strategy Associate</h3>
+              <div class="job-company">General Dynamics Mission Systems</div>
+              <h3>Embedded Software Engineer &mdash; Junior</h3>
             </div>
-            <span class="job-type">Full-Time &mdash; 2026</span>
+            <span class="job-type">Posted ~1 hr ago</span>
           </div>
-          <p>Help clients develop and execute technology strategies that drive business value. Work across industries on cloud, data, and digital transformation projects.</p>
+          <div class="job-meta">
+            <span><i class="fas fa-location-dot"></i> Orlando, FL</span>
+            <span><i class="fas fa-building"></i> Hybrid</span>
+            <span><i class="fas fa-users"></i> 10,000+</span>
+            <span class="job-pay">$85,807&ndash;$95,193/yr</span>
+          </div>
+          <p>1. Bachelor&rsquo;s in Software Engineering or related STEM field. 2. One year of experience or a master&rsquo;s degree. 3. U.S. citizenship required.</p>
           <div class="job-tags">
-            <span>Strategy</span>
-            <span>Cloud</span>
-            <span>Multiple Locations</span>
+            <span>National Defense</span>
+            <span>Embedded</span>
           </div>
+          <a class="btn btn-primary btn-sm job-apply" href="#" aria-label="Apply to Embedded Software Engineer at GDMS"><i class="fas fa-arrow-up-right-from-square"></i> Apply</a>
         </div>
 
-        <div class="job-card" data-type="internship">
+        <div class="job-card" data-work="onsite">
           <div class="job-header">
             <div>
-              <div class="job-company">American Family Insurance</div>
-              <h3>Data &amp; Analytics Intern</h3>
+              <div class="job-company">Charles Schwab</div>
+              <h3>Production Operations Developer</h3>
             </div>
-            <span class="job-type">Internship &mdash; Summer 2026</span>
+            <span class="job-type">Posted ~1 hr ago</span>
           </div>
-          <p>Support data-driven decision making through dashboards, reports, and analytics projects in the insurance industry.</p>
+          <div class="job-meta">
+            <span><i class="fas fa-location-dot"></i> Austin &amp; Southlake, TX (multi-location)</span>
+            <span><i class="fas fa-building"></i> On-site</span>
+            <span><i class="fas fa-users"></i> 10,000+</span>
+            <span class="job-pay">$33.75&ndash;$48.37/hr</span>
+          </div>
+          <p>1. Bachelor&rsquo;s in computer science, engineering, or related field or equivalent experience. 2. 0&ndash;2 years supporting production or enterprise technology. 3. Hands-on Linux and/or Windows experience.</p>
           <div class="job-tags">
-            <span>Data Analytics</span>
-            <span>Insurance</span>
-            <span>Madison, WI</span>
+            <span>Operations</span>
+            <span>Enterprise IT</span>
           </div>
+          <a class="btn btn-primary btn-sm job-apply" href="#" aria-label="Apply to Production Operations Developer at Charles Schwab"><i class="fas fa-arrow-up-right-from-square"></i> Apply</a>
         </div>
 
-        <div class="job-card" data-type="fulltime">
+        <div class="job-card" data-work="onsite">
           <div class="job-header">
             <div>
-              <div class="job-company">CUNA Mutual Group</div>
-              <h3>IT Project Coordinator</h3>
+              <div class="job-company">Capital One</div>
+              <h3>Data Engineer</h3>
             </div>
-            <span class="job-type">Full-Time &mdash; 2026</span>
+            <span class="job-type">Posted ~1 hr ago</span>
           </div>
-          <p>Coordinate IT projects from initiation to delivery. Work with cross-functional teams to manage timelines, resources, and stakeholder communication.</p>
+          <div class="job-meta">
+            <span><i class="fas fa-location-dot"></i> McLean &amp; Richmond, VA</span>
+            <span><i class="fas fa-building"></i> On-site</span>
+            <span><i class="fas fa-users"></i> 10,000+</span>
+            <span class="job-pay">$135,600&ndash;$154,800/yr</span>
+          </div>
+          <p>1. Bachelor&rsquo;s degree. 2. At least 1.5 years in application development (internships excluded per listing). 3. At least 1 year with big data technologies.</p>
           <div class="job-tags">
-            <span>Project Management</span>
-            <span>Agile</span>
-            <span>Madison, WI</span>
+            <span>Finance</span>
+            <span>Data Engineering</span>
           </div>
+          <a class="btn btn-primary btn-sm job-apply" href="#" aria-label="Apply to Data Engineer at Capital One"><i class="fas fa-arrow-up-right-from-square"></i> Apply</a>
+        </div>
+
+        <div class="job-card" data-work="hybrid">
+          <div class="job-header">
+            <div>
+              <div class="job-company">DXC Technology</div>
+              <h3>Associate Professional &mdash; Application Programmer</h3>
+            </div>
+            <span class="job-type">Posted ~1 hr ago</span>
+          </div>
+          <div class="job-meta">
+            <span><i class="fas fa-location-dot"></i> USA &mdash; CT &mdash; any city</span>
+            <span><i class="fas fa-building"></i> Hybrid</span>
+            <span><i class="fas fa-users"></i> Enterprise</span>
+            <span class="job-pay">$50,500&ndash;$93,800/yr</span>
+          </div>
+          <p>Associate-level application programming role with hybrid work in Connecticut. Replace this summary with the full description from the employer when you wire listings to Firestore.</p>
+          <div class="job-tags">
+            <span>IT Services</span>
+            <span>Software</span>
+          </div>
+          <a class="btn btn-primary btn-sm job-apply" href="#" aria-label="Apply to Associate Professional Application Programmer at DXC"><i class="fas fa-arrow-up-right-from-square"></i> Apply</a>
         </div>
 
       </div>
@@ -317,6 +424,8 @@
             <li><a href="events.html">Events</a></li>
             <li><a href="exec-board.html">Exec Board</a></li>
             <li><a href="careers.html">Careers</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="login.html">Login</a></li>
           </ul>
         </div>
         <div>
@@ -369,7 +478,7 @@
         const filter = tab.dataset.filter;
 
         jobCards.forEach(card => {
-          if (filter === 'all' || card.dataset.type === filter) {
+          if (filter === 'all' || card.dataset.work === filter) {
             card.style.display = '';
           } else {
             card.style.display = 'none';
